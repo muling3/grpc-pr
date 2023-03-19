@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+message Memory {
+  enum Unit {
+    UNKNOWN = 0;
+    Bit = 1;
+    Byte = 2;
+    KiloByte = 3;
+    MegaByte = 4;
+    GigaByte = 5;
+    TeraByte = 6;
+  }
+
+  uint32 value = 1;
+  Unit unit = 2;
+}
