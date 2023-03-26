@@ -1,6 +1,16 @@
 gen:
 	@echo "Generating go file from proto files"
-	protoc --proto_path=proto --go_out=.  proto/*.proto
+	protoc --proto_path=proto proto/*.proto  --go_out=. --go-grpc_out=. 
+	@echo "DONE!"
+	
+server:
+	@echo "Sarting server server.go"
+	go run cmd/server/main.go --port 4000
+	@echo "DONE!"
+
+client:
+	@echo "Sarting client main.go"
+	go run cmd/client/main.go --addr 0.0.0.0:4000
 	@echo "DONE!"
 
 clean:
