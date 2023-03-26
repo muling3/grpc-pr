@@ -87,13 +87,13 @@ private static final long serialVersionUID = 0L;
           }
           case 42: {
             com.github.muling3.grpc.Memory.Builder subBuilder = null;
-            if (memory_ != null) {
-              subBuilder = memory_.toBuilder();
+            if (ram_ != null) {
+              subBuilder = ram_.toBuilder();
             }
-            memory_ = input.readMessage(com.github.muling3.grpc.Memory.parser(), extensionRegistry);
+            ram_ = input.readMessage(com.github.muling3.grpc.Memory.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(memory_);
-              memory_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(ram_);
+              ram_ = subBuilder.buildPartial();
             }
 
             break;
@@ -394,30 +394,30 @@ private static final long serialVersionUID = 0L;
     return getCpu();
   }
 
-  public static final int MEMORY_FIELD_NUMBER = 5;
-  private com.github.muling3.grpc.Memory memory_;
+  public static final int RAM_FIELD_NUMBER = 5;
+  private com.github.muling3.grpc.Memory ram_;
   /**
-   * <code>.Memory memory = 5;</code>
-   * @return Whether the memory field is set.
+   * <code>.Memory ram = 5;</code>
+   * @return Whether the ram field is set.
    */
   @java.lang.Override
-  public boolean hasMemory() {
-    return memory_ != null;
+  public boolean hasRam() {
+    return ram_ != null;
   }
   /**
-   * <code>.Memory memory = 5;</code>
-   * @return The memory.
+   * <code>.Memory ram = 5;</code>
+   * @return The ram.
    */
   @java.lang.Override
-  public com.github.muling3.grpc.Memory getMemory() {
-    return memory_ == null ? com.github.muling3.grpc.Memory.getDefaultInstance() : memory_;
+  public com.github.muling3.grpc.Memory getRam() {
+    return ram_ == null ? com.github.muling3.grpc.Memory.getDefaultInstance() : ram_;
   }
   /**
-   * <code>.Memory memory = 5;</code>
+   * <code>.Memory ram = 5;</code>
    */
   @java.lang.Override
-  public com.github.muling3.grpc.MemoryOrBuilder getMemoryOrBuilder() {
-    return getMemory();
+  public com.github.muling3.grpc.MemoryOrBuilder getRamOrBuilder() {
+    return getRam();
   }
 
   public static final int GPUS_FIELD_NUMBER = 6;
@@ -652,8 +652,8 @@ private static final long serialVersionUID = 0L;
     if (cpu_ != null) {
       output.writeMessage(4, getCpu());
     }
-    if (memory_ != null) {
-      output.writeMessage(5, getMemory());
+    if (ram_ != null) {
+      output.writeMessage(5, getRam());
     }
     for (int i = 0; i < gpus_.size(); i++) {
       output.writeMessage(6, gpus_.get(i));
@@ -706,9 +706,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getCpu());
     }
-    if (memory_ != null) {
+    if (ram_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getMemory());
+        .computeMessageSize(5, getRam());
     }
     for (int i = 0; i < gpus_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -774,10 +774,10 @@ private static final long serialVersionUID = 0L;
       if (!getCpu()
           .equals(other.getCpu())) return false;
     }
-    if (hasMemory() != other.hasMemory()) return false;
-    if (hasMemory()) {
-      if (!getMemory()
-          .equals(other.getMemory())) return false;
+    if (hasRam() != other.hasRam()) return false;
+    if (hasRam()) {
+      if (!getRam()
+          .equals(other.getRam())) return false;
     }
     if (!getGpusList()
         .equals(other.getGpusList())) return false;
@@ -839,9 +839,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CPU_FIELD_NUMBER;
       hash = (53 * hash) + getCpu().hashCode();
     }
-    if (hasMemory()) {
-      hash = (37 * hash) + MEMORY_FIELD_NUMBER;
-      hash = (53 * hash) + getMemory().hashCode();
+    if (hasRam()) {
+      hash = (37 * hash) + RAM_FIELD_NUMBER;
+      hash = (53 * hash) + getRam().hashCode();
     }
     if (getGpusCount() > 0) {
       hash = (37 * hash) + GPUS_FIELD_NUMBER;
@@ -1029,11 +1029,11 @@ private static final long serialVersionUID = 0L;
         cpu_ = null;
         cpuBuilder_ = null;
       }
-      if (memoryBuilder_ == null) {
-        memory_ = null;
+      if (ramBuilder_ == null) {
+        ram_ = null;
       } else {
-        memory_ = null;
-        memoryBuilder_ = null;
+        ram_ = null;
+        ramBuilder_ = null;
       }
       if (gpusBuilder_ == null) {
         gpus_ = java.util.Collections.emptyList();
@@ -1106,10 +1106,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.cpu_ = cpuBuilder_.build();
       }
-      if (memoryBuilder_ == null) {
-        result.memory_ = memory_;
+      if (ramBuilder_ == null) {
+        result.ram_ = ram_;
       } else {
-        result.memory_ = memoryBuilder_.build();
+        result.ram_ = ramBuilder_.build();
       }
       if (gpusBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -1216,8 +1216,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasCpu()) {
         mergeCpu(other.getCpu());
       }
-      if (other.hasMemory()) {
-        mergeMemory(other.getMemory());
+      if (other.hasRam()) {
+        mergeRam(other.getRam());
       }
       if (gpusBuilder_ == null) {
         if (!other.gpus_.isEmpty()) {
@@ -1691,123 +1691,123 @@ private static final long serialVersionUID = 0L;
       return cpuBuilder_;
     }
 
-    private com.github.muling3.grpc.Memory memory_;
+    private com.github.muling3.grpc.Memory ram_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.github.muling3.grpc.Memory, com.github.muling3.grpc.Memory.Builder, com.github.muling3.grpc.MemoryOrBuilder> memoryBuilder_;
+        com.github.muling3.grpc.Memory, com.github.muling3.grpc.Memory.Builder, com.github.muling3.grpc.MemoryOrBuilder> ramBuilder_;
     /**
-     * <code>.Memory memory = 5;</code>
-     * @return Whether the memory field is set.
+     * <code>.Memory ram = 5;</code>
+     * @return Whether the ram field is set.
      */
-    public boolean hasMemory() {
-      return memoryBuilder_ != null || memory_ != null;
+    public boolean hasRam() {
+      return ramBuilder_ != null || ram_ != null;
     }
     /**
-     * <code>.Memory memory = 5;</code>
-     * @return The memory.
+     * <code>.Memory ram = 5;</code>
+     * @return The ram.
      */
-    public com.github.muling3.grpc.Memory getMemory() {
-      if (memoryBuilder_ == null) {
-        return memory_ == null ? com.github.muling3.grpc.Memory.getDefaultInstance() : memory_;
+    public com.github.muling3.grpc.Memory getRam() {
+      if (ramBuilder_ == null) {
+        return ram_ == null ? com.github.muling3.grpc.Memory.getDefaultInstance() : ram_;
       } else {
-        return memoryBuilder_.getMessage();
+        return ramBuilder_.getMessage();
       }
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
-    public Builder setMemory(com.github.muling3.grpc.Memory value) {
-      if (memoryBuilder_ == null) {
+    public Builder setRam(com.github.muling3.grpc.Memory value) {
+      if (ramBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        memory_ = value;
+        ram_ = value;
         onChanged();
       } else {
-        memoryBuilder_.setMessage(value);
+        ramBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
-    public Builder setMemory(
+    public Builder setRam(
         com.github.muling3.grpc.Memory.Builder builderForValue) {
-      if (memoryBuilder_ == null) {
-        memory_ = builderForValue.build();
+      if (ramBuilder_ == null) {
+        ram_ = builderForValue.build();
         onChanged();
       } else {
-        memoryBuilder_.setMessage(builderForValue.build());
+        ramBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
-    public Builder mergeMemory(com.github.muling3.grpc.Memory value) {
-      if (memoryBuilder_ == null) {
-        if (memory_ != null) {
-          memory_ =
-            com.github.muling3.grpc.Memory.newBuilder(memory_).mergeFrom(value).buildPartial();
+    public Builder mergeRam(com.github.muling3.grpc.Memory value) {
+      if (ramBuilder_ == null) {
+        if (ram_ != null) {
+          ram_ =
+            com.github.muling3.grpc.Memory.newBuilder(ram_).mergeFrom(value).buildPartial();
         } else {
-          memory_ = value;
+          ram_ = value;
         }
         onChanged();
       } else {
-        memoryBuilder_.mergeFrom(value);
+        ramBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
-    public Builder clearMemory() {
-      if (memoryBuilder_ == null) {
-        memory_ = null;
+    public Builder clearRam() {
+      if (ramBuilder_ == null) {
+        ram_ = null;
         onChanged();
       } else {
-        memory_ = null;
-        memoryBuilder_ = null;
+        ram_ = null;
+        ramBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
-    public com.github.muling3.grpc.Memory.Builder getMemoryBuilder() {
+    public com.github.muling3.grpc.Memory.Builder getRamBuilder() {
       
       onChanged();
-      return getMemoryFieldBuilder().getBuilder();
+      return getRamFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
-    public com.github.muling3.grpc.MemoryOrBuilder getMemoryOrBuilder() {
-      if (memoryBuilder_ != null) {
-        return memoryBuilder_.getMessageOrBuilder();
+    public com.github.muling3.grpc.MemoryOrBuilder getRamOrBuilder() {
+      if (ramBuilder_ != null) {
+        return ramBuilder_.getMessageOrBuilder();
       } else {
-        return memory_ == null ?
-            com.github.muling3.grpc.Memory.getDefaultInstance() : memory_;
+        return ram_ == null ?
+            com.github.muling3.grpc.Memory.getDefaultInstance() : ram_;
       }
     }
     /**
-     * <code>.Memory memory = 5;</code>
+     * <code>.Memory ram = 5;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.github.muling3.grpc.Memory, com.github.muling3.grpc.Memory.Builder, com.github.muling3.grpc.MemoryOrBuilder> 
-        getMemoryFieldBuilder() {
-      if (memoryBuilder_ == null) {
-        memoryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+        getRamFieldBuilder() {
+      if (ramBuilder_ == null) {
+        ramBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
             com.github.muling3.grpc.Memory, com.github.muling3.grpc.Memory.Builder, com.github.muling3.grpc.MemoryOrBuilder>(
-                getMemory(),
+                getRam(),
                 getParentForChildren(),
                 isClean());
-        memory_ = null;
+        ram_ = null;
       }
-      return memoryBuilder_;
+      return ramBuilder_;
     }
 
     private java.util.List<com.github.muling3.grpc.GPU> gpus_ =

@@ -32,16 +32,16 @@ public final class LaptopMessage {
       "e.proto\032\024memory_message.proto\032\024screen_me" +
       "ssage.proto\032\025storage_message.proto\032\026keyb" +
       "oard_message.proto\032\037google/protobuf/time" +
-      "stamp.proto\"\317\002\n\006Laptop\022\n\n\002id\030\001 \001(\t\022\r\n\005br" +
+      "stamp.proto\"\314\002\n\006Laptop\022\n\n\002id\030\001 \001(\t\022\r\n\005br" +
       "and\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\021\n\003cpu\030\004 \001(\0132\004.C" +
-      "PU\022\027\n\006memory\030\005 \001(\0132\007.Memory\022\022\n\004gpus\030\006 \003(" +
-      "\0132\004.GPU\022\032\n\010storages\030\007 \003(\0132\010.Storage\022\027\n\006s" +
-      "creen\030\010 \001(\0132\007.Screen\022\033\n\010keyboard\030\t \001(\0132\t" +
-      ".Keyboard\022\023\n\tweight_kg\030\n \001(\001H\000\022\022\n\010weight" +
-      "_g\030\013 \001(\001H\000\022\021\n\tprice_usd\030\014 \001(\001\022\024\n\014release" +
-      "_year\030\r \001(\r\022.\n\nupdated_at\030\016 \001(\0132\032.google" +
-      ".protobuf.TimestampB\010\n\006weightB!\n\027com.git" +
-      "hub.muling3.grpcP\001Z\004./pbb\006proto3"
+      "PU\022\024\n\003ram\030\005 \001(\0132\007.Memory\022\022\n\004gpus\030\006 \003(\0132\004" +
+      ".GPU\022\032\n\010storages\030\007 \003(\0132\010.Storage\022\027\n\006scre" +
+      "en\030\010 \001(\0132\007.Screen\022\033\n\010keyboard\030\t \001(\0132\t.Ke" +
+      "yboard\022\023\n\tweight_kg\030\n \001(\001H\000\022\022\n\010weight_g\030" +
+      "\013 \001(\001H\000\022\021\n\tprice_usd\030\014 \001(\001\022\024\n\014release_ye" +
+      "ar\030\r \001(\r\022.\n\nupdated_at\030\016 \001(\0132\032.google.pr" +
+      "otobuf.TimestampB\010\n\006weightB!\n\027com.github" +
+      ".muling3.grpcP\001Z\004./pbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -58,7 +58,7 @@ public final class LaptopMessage {
     internal_static_Laptop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Laptop_descriptor,
-        new java.lang.String[] { "Id", "Brand", "Name", "Cpu", "Memory", "Gpus", "Storages", "Screen", "Keyboard", "WeightKg", "WeightG", "PriceUsd", "ReleaseYear", "UpdatedAt", "Weight", });
+        new java.lang.String[] { "Id", "Brand", "Name", "Cpu", "Ram", "Gpus", "Storages", "Screen", "Keyboard", "WeightKg", "WeightG", "PriceUsd", "ReleaseYear", "UpdatedAt", "Weight", });
     com.github.muling3.grpc.ProcessorMessage.getDescriptor();
     com.github.muling3.grpc.MemoryMessage.getDescriptor();
     com.github.muling3.grpc.ScreenMessage.getDescriptor();

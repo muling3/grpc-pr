@@ -30,9 +30,9 @@ public final class MemoryMessage {
     java.lang.String[] descriptorData = {
       "\n\024memory_message.proto\"\223\001\n\006Memory\022\r\n\005val" +
       "ue\030\001 \001(\r\022\032\n\004unit\030\002 \001(\0162\014.Memory.Unit\"^\n\004" +
-      "Unit\022\013\n\007UNKNOWN\020\000\022\007\n\003Bit\020\001\022\010\n\004Byte\020\002\022\014\n\010" +
-      "KiloByte\020\003\022\014\n\010MegaByte\020\004\022\014\n\010GigaByte\020\005\022\014" +
-      "\n\010TeraByte\020\006B!\n\027com.github.muling3.grpcP" +
+      "Unit\022\013\n\007UNKNOWN\020\000\022\007\n\003BIT\020\001\022\010\n\004BYTE\020\002\022\014\n\010" +
+      "KILOBYTE\020\003\022\014\n\010MEGABYTE\020\004\022\014\n\010GIGABYTE\020\005\022\014" +
+      "\n\010TERABYTE\020\006B!\n\027com.github.muling3.grpcP" +
       "\001Z\004./pbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

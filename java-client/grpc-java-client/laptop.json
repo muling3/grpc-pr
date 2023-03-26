@@ -1,0 +1,57 @@
+{
+  "id": "",
+  "brand": "Dell",
+  "name": "XPS",
+  "cpu": {
+    "name": "Ryzen 5 PRO 3500U",
+    "brand": "AMD",
+    "number_cores": 4,
+    "number_threads": 5,
+    "min_ghz": 3.413473655734439,
+    "max_ghz": 4.594915257746433
+  },
+  "ram": {
+    "value": 36,
+    "unit": "GIGABYTE"
+  },
+  "gpus": [{
+    "name": "RX 590",
+    "brand": "AMD",
+    "min_ghz": 1.3080478932782733,
+    "max_ghz": 1.910696269823025,
+    "memory": {
+      "value": 6,
+      "unit": "GIGABYTE"
+    }
+  }],
+  "storages": [{
+    "driver": "SSD",
+    "memory": {
+      "value": 941,
+      "unit": "GIGABYTE"
+    }
+  }, {
+    "driver": "HDD",
+    "memory": {
+      "value": 3,
+      "unit": "TERABYTE"
+    }
+  }],
+  "screen": {
+    "size_inch": 14.926041,
+    "resolution": {
+      "width": 5923,
+      "height": 3332
+    },
+    "panel": "OLED",
+    "multitouch": false
+  },
+  "keyboard": {
+    "layout": "QWERTZ",
+    "backlit": false
+  },
+  "weight_kg": 2.369361729184951,
+  "price_usd": 2307.470693105688,
+  "release_year": 2015,
+  "updated_at": "2023-03-26T08:32:42.163764943Z"
+}

@@ -59,19 +59,19 @@ public interface LaptopOrBuilder extends
   com.github.muling3.grpc.CPUOrBuilder getCpuOrBuilder();
 
   /**
-   * <code>.Memory memory = 5;</code>
-   * @return Whether the memory field is set.
+   * <code>.Memory ram = 5;</code>
+   * @return Whether the ram field is set.
    */
-  boolean hasMemory();
+  boolean hasRam();
   /**
-   * <code>.Memory memory = 5;</code>
-   * @return The memory.
+   * <code>.Memory ram = 5;</code>
+   * @return The ram.
    */
-  com.github.muling3.grpc.Memory getMemory();
+  com.github.muling3.grpc.Memory getRam();
   /**
-   * <code>.Memory memory = 5;</code>
+   * <code>.Memory ram = 5;</code>
    */
-  com.github.muling3.grpc.MemoryOrBuilder getMemoryOrBuilder();
+  com.github.muling3.grpc.MemoryOrBuilder getRamOrBuilder();
 
   /**
    * <code>repeated .GPU gpus = 6;</code>

@@ -102,29 +102,29 @@ private static final long serialVersionUID = 0L;
      */
     UNKNOWN(0),
     /**
-     * <code>Bit = 1;</code>
+     * <code>BIT = 1;</code>
      */
-    Bit(1),
+    BIT(1),
     /**
-     * <code>Byte = 2;</code>
+     * <code>BYTE = 2;</code>
      */
-    Byte(2),
+    BYTE(2),
     /**
-     * <code>KiloByte = 3;</code>
+     * <code>KILOBYTE = 3;</code>
      */
-    KiloByte(3),
+    KILOBYTE(3),
     /**
-     * <code>MegaByte = 4;</code>
+     * <code>MEGABYTE = 4;</code>
      */
-    MegaByte(4),
+    MEGABYTE(4),
     /**
-     * <code>GigaByte = 5;</code>
+     * <code>GIGABYTE = 5;</code>
      */
-    GigaByte(5),
+    GIGABYTE(5),
     /**
-     * <code>TeraByte = 6;</code>
+     * <code>TERABYTE = 6;</code>
      */
-    TeraByte(6),
+    TERABYTE(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -133,29 +133,29 @@ private static final long serialVersionUID = 0L;
      */
     public static final int UNKNOWN_VALUE = 0;
     /**
-     * <code>Bit = 1;</code>
+     * <code>BIT = 1;</code>
      */
-    public static final int Bit_VALUE = 1;
+    public static final int BIT_VALUE = 1;
     /**
-     * <code>Byte = 2;</code>
+     * <code>BYTE = 2;</code>
      */
-    public static final int Byte_VALUE = 2;
+    public static final int BYTE_VALUE = 2;
     /**
-     * <code>KiloByte = 3;</code>
+     * <code>KILOBYTE = 3;</code>
      */
-    public static final int KiloByte_VALUE = 3;
+    public static final int KILOBYTE_VALUE = 3;
     /**
-     * <code>MegaByte = 4;</code>
+     * <code>MEGABYTE = 4;</code>
      */
-    public static final int MegaByte_VALUE = 4;
+    public static final int MEGABYTE_VALUE = 4;
     /**
-     * <code>GigaByte = 5;</code>
+     * <code>GIGABYTE = 5;</code>
      */
-    public static final int GigaByte_VALUE = 5;
+    public static final int GIGABYTE_VALUE = 5;
     /**
-     * <code>TeraByte = 6;</code>
+     * <code>TERABYTE = 6;</code>
      */
-    public static final int TeraByte_VALUE = 6;
+    public static final int TERABYTE_VALUE = 6;
 
 
     public final int getNumber() {
@@ -183,12 +183,12 @@ private static final long serialVersionUID = 0L;
     public static Unit forNumber(int value) {
       switch (value) {
         case 0: return UNKNOWN;
-        case 1: return Bit;
-        case 2: return Byte;
-        case 3: return KiloByte;
-        case 4: return MegaByte;
-        case 5: return GigaByte;
-        case 6: return TeraByte;
+        case 1: return BIT;
+        case 2: return BYTE;
+        case 3: return KILOBYTE;
+        case 4: return MEGABYTE;
+        case 5: return GIGABYTE;
+        case 6: return TERABYTE;
         default: return null;
       }
     }
