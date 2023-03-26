@@ -1,0 +1,33 @@
+plugins {
+    id "com.google.protobuf" version "0.9.2"
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation group: 'com.google.protobuf', name: 'protobuf-java', version: '3.22.2'
+
+    implementation group: 'io.grpc', name: 'grpc-all', version: '1.54.0'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceSets{
+    main {
+        java {
+            srcDirs "build/generated/source/proto/main/grpc"
+            srcDirs "build/generated/source/proto/main/java"
+        }
+    }
+}
